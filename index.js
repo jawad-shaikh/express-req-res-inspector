@@ -1,7 +1,6 @@
 const checkMethod = require('./utils/checkMethod');
 const checkResponseTime = require('./utils/checkResponseTime');
 const checkStatus = require('./utils/checkStatus');
-const checkResponseMessage = require('./utils/checkResponseMessage');
 
 const log = console.log;
 
@@ -49,7 +48,7 @@ const logRequest = (options) => {
             }
 
             if (options.responseMessage) {
-                log(`- Response Message: ${checkResponseMessage(body)}`);
+                log(`- Response: ${body}`);
             }
 
             if (options.responseTime) {

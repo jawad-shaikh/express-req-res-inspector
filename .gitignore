@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Package-lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

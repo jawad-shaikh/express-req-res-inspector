@@ -16,12 +16,21 @@ const reqResInspector = require('express-req-res-inspector');
 
 // Other middleware and routes
 
-app.use(reqResInspector());
+// Customize the logging options
+app.use(reqResInspector({
+    requestUrl: true,       // Log the request URL
+    requestBody: true,      // Log the request body
+    responseStatus: true,   // Log the response status code
+    responseMessage: true,  // Log a response message
+    responseTime: false     // Log the response time; set to `true` to enable
+}));
+
+// By customizing the options object, you can control which details are logged. By default, if no options are specified, all properties will be set to true.
 
 // Start the server
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
-});a
+});
 ```
 
 The reqResInspector() function call adds the middleware to your app, allowing it to log request and response details.

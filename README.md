@@ -22,14 +22,7 @@ Picture it as your app's personal fitness tracker. Keep tabs on response times a
 
 **You:** *sips coffee* "One moment, please." 🧐
 
--------------------------
-
-- Incoming Request: GET /recourse
-- Request Body: {}
-- Status Code: 200
-- Response: { data: ... }
-
--------------------------
+![Example Image](https://i.imgur.com/qufHkQF.png)
 
 The logs reveal the API did send the data, but the frontend ...
 
@@ -37,15 +30,7 @@ The logs reveal the API did send the data, but the frontend ...
 
 **Frontend Dev:** "The app's as slow as a snail on vacation!"
 
--------------------------
-
-- Incoming Request: GET /recourse
-- Request Body: {}
-- Status Code: 200
-- Response: { data: ... }
-- Response Time: 👍 2 ms
-
--------------------------
+![Example Image](https://i.imgur.com/28Rkc9r.png)
 
 **You:** *sips coffee* "One moment, please." 🧐
 

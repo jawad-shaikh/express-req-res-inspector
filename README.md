@@ -26,13 +26,13 @@ Picture it as your app's personal fitness tracker. Keep tabs on response times a
 
 The logs reveal the API did send the data, but the frontend ...
 
-### Case #2: The Need for Speed
+### Case #2:
 
 **Frontend Dev:** "The app's as slow as a snail on vacation!"
 
-![Example Image](https://i.imgur.com/28Rkc9r.png)
-
 **You:** *sips coffee* "One moment, please." 🧐
+
+![Example Image](https://i.imgur.com/28Rkc9r.png)
 
 Your trusty logs highlight an endpoint that's taking its sweet time, and You're the Flash of the backend world! ⚡️
 

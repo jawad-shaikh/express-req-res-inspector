@@ -49,7 +49,7 @@ const logRequest = (options) => {
 
       if (options.requestUrl) {
         log(
-          `\n- Incoming Request: ${checkMethod(req.method)} ${req.originalUrl}`
+          `- Incoming Request: ${checkMethod(req.method)} ${req.originalUrl}`
         );
       }
 

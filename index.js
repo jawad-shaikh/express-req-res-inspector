@@ -17,6 +17,7 @@ const logRequest = (options) => {
   return (req, res, next) => {
     const startTime = new Date();
 
+    res.on('finish', () => {
       const endTime = new Date();
       const totalTime = endTime.getTime() - startTime.getTime();
 
@@ -50,6 +51,7 @@ const logRequest = (options) => {
       }
 
       log("\n-------------------------")
+    });
 
     next();
   };

@@ -1,6 +1,6 @@
 {
   "name": "express-req-res-inspector",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "The `express-req-res-inspector` package provides a versatile middleware for Node.js applications built on the Express.js framework. This middleware seamlessly integrates into your project, offering comprehensive logging of incoming requests and outgoing responses. By capturing essential details such as request URLs, request bodies, response statuses, response messages, and response times, this package serves as an invaluable tool for effective collaboration between frontend and backend developers.",
   "main": "index.js",
   "scripts": {

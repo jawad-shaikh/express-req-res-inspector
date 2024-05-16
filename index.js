@@ -10,28 +10,12 @@ const logRequest = (options) => {
     requestUrl: true,
     requestBody: true,
     responseStatus: true,
-    responseMessage: true,
     responseTime: true,
     ...options,
   };
 
   return (req, res, next) => {
     const startTime = new Date();
-    const chunks = [];
-
-    const oldWrite = res.write;
-    res.write = function (chunk) {
-      chunks.push(chunk);
-      oldWrite.apply(res, arguments);
-    };
-
-    const oldEnd = res.end;
-    res.end = function (chunk) {
-      if (chunk) {
-        chunks.push(chunk);
-      }
-
-      const body = Buffer.concat(chunks).toString("utf8");
 
       const endTime = new Date();
       const totalTime = endTime.getTime() - startTime.getTime();
@@ -61,18 +45,11 @@ const logRequest = (options) => {
         log(`- Status Code: ${checkStatus(res.statusCode)}`);
       }
 
-      if (options.responseMessage) {
-        log(`- Response: ${body}`);
-      }
-
       if (options.responseTime) {
         log(`- Response Time: ${checkResponseTime(totalTime)} ms`);
       }
 
-      log("\n-------------------------");
-
-      oldEnd.apply(res, arguments);
-    };
+      log("\n-------------------------")
 
     next();
   };
